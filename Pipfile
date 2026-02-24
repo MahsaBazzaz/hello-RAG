@@ -7,6 +7,8 @@ name = "pypi"
 langchain = "*"
 langchain-openai = "*"
 langchain_ollama = "*"
+tavily-python = "*"
+langchain_tavily = "*"
 openai = "*"
 python-dotenv = "*"
 

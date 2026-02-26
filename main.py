@@ -28,7 +28,8 @@ def main():
             template=my_template
         )
         # llm = ChatOpenAI(model="gpt-5", temperature=0)
-        llm = ChatOllama(model = "gemma3:270m", temperature=0)
+        # llm = ChatOllama(model = "gemma3:270m", temperature=0)
+        llm = ChatOllama(model = "llama3.1:8b", temperature=0)
         chain = my_prompt_template | llm
         response = chain.invoke(input={"info": info})
         print("Response from the model:")

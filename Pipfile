@@ -9,6 +9,7 @@ langchain-openai = "*"
 langchain_ollama = "*"
 tavily-python = "*"
 langchain_tavily = "*"
+langchain-community = "*"
 openai = "*"
 python-dotenv = "*"
 

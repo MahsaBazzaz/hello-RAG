@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 
 from typing import List
+from langchain_ollama import ChatOllama
 from pydantic import BaseModel, Field
 
 from langchain.agents import create_agent
@@ -8,6 +9,8 @@ from langchain.tools import tool
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
 from langchain_tavily import TavilySearch
+
+from callbacks import AgentCallbackHandler
 
 load_dotenv()
 
@@ -22,10 +25,11 @@ class AgentResponse(BaseModel):
 
 def main():
     print("Hello, RAG!")
-    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    # llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm = ChatOllama(model="llama3.1:8b", temperature=0, callbacks=[AgentCallbackHandler()])
     tools = [TavilySearch()]
     agent = create_agent(model=llm, tools=tools, response_format=AgentResponse)
-    response = agent.invoke({"messages": [HumanMessage(content="Search for three internship postings for AI research in the US in LinkedIn.")]})
+    response = agent.invoke({"messages": [HumanMessage(content="What is the weather in Dubai right now? Compare it with San Francisco. Output in Celsius")]})
     print(response)
 
 

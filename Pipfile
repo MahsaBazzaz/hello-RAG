@@ -10,10 +10,11 @@ langchain_ollama = "*"
 tavily-python = "*"
 langchain_tavily = "*"
 langchain-community = "*"
+langchain-pinecone = "*"
 openai = "*"
 python-dotenv = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.14"
+python_version = "3.13"

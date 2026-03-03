@@ -22,7 +22,7 @@ langchain_tavily = "*"
 langchain-community = "*"
 langchain-pinecone = "*"
 langchain-chroma = "*"
-pinecone-client = "*"
+pinecone = ">=6.0.0,<8.0.0"
 openai = "*"
 python-dotenv = "*"
 

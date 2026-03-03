@@ -4,6 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+beautifulsoup4 = "*"
+tiktoken = "*"
+nltk = "*"
+fastapi = "*"
+jinja2 = "*"
+uvicorn = "*"
+streamlit = "*"
+streamlit-chat = "*"
+tqdm = "*"
+
 langchain = "*"
 langchain-openai = "*"
 langchain_ollama = "*"
@@ -11,6 +21,8 @@ tavily-python = "*"
 langchain_tavily = "*"
 langchain-community = "*"
 langchain-pinecone = "*"
+langchain-chroma = "*"
+pinecone-client = "*"
 openai = "*"
 python-dotenv = "*"
 
